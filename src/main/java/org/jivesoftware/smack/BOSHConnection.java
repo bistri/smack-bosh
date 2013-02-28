@@ -308,6 +308,14 @@ public class BOSHConnection extends Connection {
         return false;
     }
 
+    protected BOSHClient getClient() {
+        return client;
+    }
+
+    protected ExecutorService getListenerExecutor() {
+        return listenerExecutor;
+    }
+
     public void login(String username, String password, String resource)
             throws XMPPException {
         if (!isConnected()) {
